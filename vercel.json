@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/", "destination": "/WDL_Heatwave/index.html" },
+    { "source": "/:path*", "destination": "/WDL_Heatwave/:path*" }
+  ]
+}
