@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forecast Summary | Heatwave Intelligence System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar" id="site-sidebar">
+    <div class="sidebar-brand">
+        <h2>HIS</h2><span class="live-dot">LIVE</span>
+        <button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-controls="site-sidebar" aria-expanded="true" title="Collapse sidebar">
+            <span class="toggle-icon" aria-hidden="true">‹</span><span class="toggle-label">Collapse sidebar</span>
+        </button>
+    </div>
+    <nav aria-label="Main navigation">
+        <a href="index.html" data-short="D">Dashboard</a><a href="alerts.html" data-short="A">Alerts</a><a href="hotspot.html" data-short="M">Hotspot Map</a><a href="forecast.html" class="active" aria-current="page" data-short="F">Forecast Summary</a><a href="subscribe.html" data-short="S">Subscribe</a><a href="sources.html" data-short="R">Sources &amp; Stakeholders</a><a href="about.html" data-short="I">About</a><a href="media.html" data-short="W">Media &amp; Awareness</a>
+    </nav>
+    <div class="sidebar-note">Climate intelligence for monitoring, prediction and early warning.<br><br>Demo data only — not an official warning service.</div>
+</aside>
+<main class="main">
+    <div class="content">
+        
+<section class="page-head"><div class="eyebrow">Forecast intelligence</div><h1>Forecast Summary</h1><p>Read the seven-day regional outlook first, then drill into the station-style operational snapshot used in the original heatwave-prediction project.</p></section>
+
+<section class="section">
+    <div class="panel">
+        <div class="forecast-toolbar"><div><label class="forecast-label" for="region-select">Select region</label><select id="region-select" class="forecast-select"></select></div><div class="forecast-legend"><span class="forecast-pill level-normal">Normal</span><span class="forecast-pill level-watch">Watch</span><span class="forecast-pill level-warning">Warning</span><span class="forecast-pill level-severe">Severe</span></div></div>
+        <p id="region-covers" class="forecast-covers"></p>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">7-Day Regional Outlook</h2>
+    <p class="section-intro">Use the region selector to understand whether elevated temperatures are expected to be brief or persistent.</p>
+    <div id="forecast-grid" class="forecast-grid" aria-live="polite"></div>
+</section>
+
+<section class="section">
+    <div class="grid-2">
+        <article class="card"><h3>How to read the trend</h3><p>A rising sequence indicates increasing heat pressure, while several consecutive days near or above warning thresholds suggest a stronger persistence signal than one isolated hot day.</p></article>
+        <article class="card"><h3>Why departure from normal matters</h3><p>The operational snapshot adds departure-from-normal values so a raw maximum can be interpreted in relation to the expected local baseline.</p></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Operational station forecast</h2>
+    <p class="section-intro">This compact three-day-style view preserves the companion site's station, maximum-temperature, departure and severity fields.</p>
+    <div class="filter-bar"><label for="forecast-filter">Filter by zone</label><select id="forecast-filter"><option value="all">All Zones</option><option value="north zone">North Zone</option><option value="central zone">Central Zone</option></select></div>
+    <div class="table-wrapper spaced-table"><table id="forecast-table"><caption>Station snapshot — Northern &amp; Central Zones</caption><thead><tr><th>Region</th><th>Station</th><th>Max Temp</th><th>Departure from Normal</th><th>Severity</th></tr></thead><tbody></tbody><tfoot><tr><td colspan="5">Demo data derived from the two source projects. A production deployment would consume validated observation feeds before issuing alerts.</td></tr></tfoot></table></div>
+    <div class="highlight-box tight-highlight"><strong>Highest visible temperature:</strong> <span id="highest-temp">—</span></div>
+</section>
+
+<section class="section"><div id="forecast-summary" class="forecast-summary" aria-live="polite"></div></section>
+
+    </div>
+</main>
+<script src="jquery-4.0.0.min.js"></script>
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script src="forecast.js"></script>
+</body>
+</html>

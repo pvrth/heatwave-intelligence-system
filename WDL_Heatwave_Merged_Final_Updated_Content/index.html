@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | Heatwave Intelligence System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar" id="site-sidebar">
+    <div class="sidebar-brand">
+        <h2>HIS</h2><span class="live-dot">LIVE</span>
+        <button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-controls="site-sidebar" aria-expanded="true" title="Collapse sidebar">
+            <span class="toggle-icon" aria-hidden="true">‹</span><span class="toggle-label">Collapse sidebar</span>
+        </button>
+    </div>
+    <nav aria-label="Main navigation">
+        <a href="index.html" class="active" aria-current="page" data-short="D">Dashboard</a><a href="alerts.html" data-short="A">Alerts</a><a href="hotspot.html" data-short="M">Hotspot Map</a><a href="forecast.html" data-short="F">Forecast Summary</a><a href="subscribe.html" data-short="S">Subscribe</a><a href="sources.html" data-short="R">Sources &amp; Stakeholders</a><a href="about.html" data-short="I">About</a><a href="media.html" data-short="W">Media &amp; Awareness</a>
+    </nav>
+    <div class="sidebar-note">Climate intelligence for monitoring, prediction and early warning.<br><br>Demo data only — not an official warning service.</div>
+</aside>
+<main class="main">
+    <div class="content">
+        
+<section class="page-head"><div class="eyebrow">Climate intelligence dashboard</div><h1>Heatwave Intelligence System</h1><p>Climate Intelligence for Heatwave Monitoring, Prediction &amp; Early Warning — bringing the mini-project dashboard together with the companion project's operational heatwave workflow.</p></section>
+
+<section class="hero">
+    <div class="hero-heading"><div><span class="section-kicker">MONITORING PERIOD</span><h2>Summer 2026 demonstration view</h2></div><span class="season-badge">Monitoring active</span></div>
+    <p>Start here for the overall picture: thermal indicators, regional status, the alert workflow and quick routes into the forecast, hotspot and advisory pages.</p>
+    <div class="status-banner"><strong>Severe Heatwave Alert:</strong> Northern Plains region requires heightened attention in the sample bulletin. Review the bulletin, forecast and safety actions before responding.<button type="button" id="dismiss-alert" class="small-button">Dismiss</button><span class="status-time">Checked <span id="status-time">--:--</span></span></div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Live thermal analytics &amp; indicators</h2>
+    <p class="section-intro">Illustrative telemetry showing the kinds of signals the heatwave-prediction workflow can bring into a dashboard.</p>
+    <div class="metrics-grid">
+        <article class="metric-card"><div class="label">Max surface temp</div><div class="value">46.8 °C</div><div class="subtext">AWS-108 · Central Plain</div></article>
+        <article class="metric-card"><div class="label">Heat index / RealFeel</div><div class="value alert">51.2 °C</div><div class="subtext">High humidity spike</div></article>
+        <article class="metric-card"><div class="label">Solar irradiance</div><div class="value">1020 W/m²</div><div class="subtext">Peak radiation phase</div></article>
+        <article class="metric-card"><div class="label">Vulnerability zone</div><div class="value value-compact">Central Industrial District</div><div class="subtext alert">High vulnerability index</div></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Regional temperature snapshot</h2>
+    <p class="section-intro">The sortable regional table remains the primary mini-project feature and is now connected conceptually to the heatwave warning workflow.</p>
+    <div class="tablewrap"><table id="tbl"><thead><tr><th class="sort" data-k="name">Region</th><th class="sort" data-k="t">Today (°C)</th><th>Alert level</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section class="section">
+    <div class="section-heading-row"><div><h2 class="section-title">From data to warning</h2><p class="section-intro">The five-stage pipeline is the bridge between the two projects.</p></div><a class="section-link" href="about.html">Understand the system →</a></div>
+    <div class="process-grid">
+        <article class="process-step"><span class="step-no">01 · ACQUIRE</span><h3>Collect observations</h3><p>Temperature and humidity from field sensors, stations and thermal sources.</p></article>
+        <article class="process-step"><span class="step-no">02 · VALIDATE</span><h3>Clean and verify</h3><p>Check data quality and prepare consistent regional inputs.</p></article>
+        <article class="process-step"><span class="step-no">03 · PREDICT</span><h3>Run forecast model</h3><p>Estimate regional maximum temperature and heat persistence.</p></article>
+        <article class="process-step"><span class="step-no">04 · CLASSIFY</span><h3>Assign severity</h3><p>Translate forecasts into Normal, Watch, Warning and Severe.</p></article>
+        <article class="process-step"><span class="step-no">05 · RESPOND</span><h3>Issue advisories</h3><p>Publish warnings, guide response and support public action.</p></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Explore the system</h2>
+    <div class="grid-2">
+        <article class="protocol-card"><span class="card-number">01 · FORECAST</span><h3>Watch the next seven days</h3><p>Compare regional temperature trends and the station-level operational snapshot.</p><a href="forecast.html">Open forecast →</a></article>
+        <article class="protocol-card"><span class="card-number">02 · HOTSPOTS</span><h3>See where heat is concentrated</h3><p>Use the interactive India map to move from a national view to a regional heat-risk message.</p><a href="hotspot.html">Open hotspot map →</a></article>
+        <article class="protocol-card"><span class="card-number">03 · ALERTS</span><h3>Read the warning bulletin</h3><p>See the Northern Plains sample bulletin, regional status cards and practical actions.</p><a href="alerts.html">Open alerts →</a></article>
+        <article class="protocol-card"><span class="card-number">04 · ADVISORIES</span><h3>Set a notification profile</h3><p>Select language, alert threshold and delivery preferences in the academic demo form.</p><a href="subscribe.html">Subscribe →</a></article>
+    </div>
+</section>
+
+    </div>
+</main>
+<script src="jquery-4.0.0.min.js"></script>
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

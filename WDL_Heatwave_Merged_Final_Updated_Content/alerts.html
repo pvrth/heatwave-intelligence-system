@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alerts | Heatwave Intelligence System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar" id="site-sidebar">
+    <div class="sidebar-brand">
+        <h2>HIS</h2><span class="live-dot">LIVE</span>
+        <button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-controls="site-sidebar" aria-expanded="true" title="Collapse sidebar">
+            <span class="toggle-icon" aria-hidden="true">‹</span><span class="toggle-label">Collapse sidebar</span>
+        </button>
+    </div>
+    <nav aria-label="Main navigation">
+        <a href="index.html" data-short="D">Dashboard</a><a href="alerts.html" class="active" aria-current="page" data-short="A">Alerts</a><a href="hotspot.html" data-short="M">Hotspot Map</a><a href="forecast.html" data-short="F">Forecast Summary</a><a href="subscribe.html" data-short="S">Subscribe</a><a href="sources.html" data-short="R">Sources &amp; Stakeholders</a><a href="about.html" data-short="I">About</a><a href="media.html" data-short="W">Media &amp; Awareness</a>
+    </nav>
+    <div class="sidebar-note">Climate intelligence for monitoring, prediction and early warning.<br><br>Demo data only — not an official warning service.</div>
+</aside>
+<main class="main">
+    <div class="content">
+        
+<section class="page-head"><div class="eyebrow">Current warnings</div><h1>Heatwave Alerts &amp; Bulletins</h1><p>This page combines the mini-project's alert levels with the heatwave-prediction project's detailed severe-warning bulletin and response guidance.</p></section>
+
+<section class="section">
+    <div class="alert-panel" id="north-bulletin">
+        <span class="alert-label">Severe heatwave · sample bulletin</span>
+        <h2>Severe Heatwave Alert — <mark>Northern Plains Region</mark></h2>
+        <p>The reference bulletin represents the kind of operational message the system is designed to surface: a clearly named region, severity, observed/forecast metrics, advisory window and update context.</p>
+        <div class="metric-row"><div class="metric"><span>Maximum temperature</span><strong>47°C</strong></div><div class="metric"><span>Departure from normal</span><strong>+7.0°C</strong></div><div class="metric"><span>Bulletin version</span><strong>2.1</strong></div></div>
+        <p><strong>Public advisory:</strong> Avoid unnecessary outdoor activity during the hottest part of the afternoon, stay hydrated and check official local instructions. Operational warnings should always be verified against the latest authority-issued bulletin.</p>
+        <p><small>The 47°C and +7.0°C values are retained from the companion project's classroom example. They are not live observations.</small></p>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">What the warning contains</h2>
+    <div class="grid">
+        <article class="card"><span class="card-number">01</span><h3>Location</h3><p>A warning names the affected region or station cluster so users know where the risk applies.</p></article>
+        <article class="card"><span class="card-number">02</span><h3>Severity</h3><p>A consistent level — Normal, Watch, Warning or Severe — makes different pages easier to interpret together.</p></article>
+        <article class="card"><span class="card-number">03</span><h3>Evidence</h3><p>Maximum temperature and departure-from-normal fields provide context behind the warning rather than a label alone.</p></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Active regional alerts</h2>
+    <p class="section-intro">These cards use the same demonstration region dataset as the dashboard, so the status shown here stays consistent with the rest of the site.</p>
+    <div id="regional-alerts" class="alerts-grid" aria-live="polite"></div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Alert level guide</h2>
+    <div class="alerts-grid">
+        <article class="alerts-card alerts-l0"><span class="badge l0">Normal</span><h3>Normal conditions</h3><p>No elevated heat signal in the current demonstration data. Continue routine monitoring.</p></article>
+        <article class="alerts-card alerts-l1"><span class="badge l1">Watch</span><h3>Heat being monitored</h3><p>Temperatures are elevated enough to justify increased awareness and preparation.</p></article>
+        <article class="alerts-card alerts-l2"><span class="badge l2">Warning</span><h3>High heat risk</h3><p>Limit prolonged exposure, strengthen hydration and review local heat-health measures.</p></article>
+        <article class="alerts-card alerts-l3"><span class="badge l3">Severe</span><h3>Extreme heat risk</h3><p>Avoid unnecessary exposure and follow official emergency and health guidance.</p></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Recommended actions</h2>
+    <div class="grid-2">
+        <article class="protocol-card"><h3>For response teams</h3><p>Validate the affected area, review the forecast trend, coordinate field teams and communicate the latest approved warning to the public.</p><a href="forecast.html">Review forecast →</a></article>
+        <article class="protocol-card"><h3>For communities</h3><p>Drink water regularly, reduce strenuous outdoor activity during peak heat, use shade or cooling spaces and check on people who may be more vulnerable to heat.</p><a href="subscribe.html">Set advisory preferences →</a></article>
+    </div>
+</section>
+
+    </div>
+</main>
+<script src="jquery-4.0.0.min.js"></script>
+<script src="site.js"></script>
+<script src="data.js"></script>
+<script src="alerts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | Heatwave Intelligence System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar" id="site-sidebar">
+    <div class="sidebar-brand">
+        <h2>HIS</h2><span class="live-dot">LIVE</span>
+        <button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-controls="site-sidebar" aria-expanded="true" title="Collapse sidebar">
+            <span class="toggle-icon" aria-hidden="true">‹</span><span class="toggle-label">Collapse sidebar</span>
+        </button>
+    </div>
+    <nav aria-label="Main navigation">
+        <a href="index.html" data-short="D">Dashboard</a><a href="alerts.html" data-short="A">Alerts</a><a href="hotspot.html" data-short="M">Hotspot Map</a><a href="forecast.html" data-short="F">Forecast Summary</a><a href="subscribe.html" data-short="S">Subscribe</a><a href="sources.html" data-short="R">Sources &amp; Stakeholders</a><a href="about.html" class="active" aria-current="page" data-short="I">About</a><a href="media.html" data-short="W">Media &amp; Awareness</a>
+    </nav>
+    <div class="sidebar-note">Climate intelligence for monitoring, prediction and early warning.<br><br>Demo data only — not an official warning service.</div>
+</aside>
+<main class="main">
+    <div class="content">
+        
+<section class="page-head"><div class="eyebrow">Project context</div><h1>About the Heatwave Intelligence System</h1><p>A unified academic prototype for heatwave monitoring, prediction and early warning. The interface merges the mini-project dashboard with the stronger operational concepts from the heatwave-prediction site.</p></section>
+
+<section class="section">
+    <div class="info-grid">
+        <article class="info-block objective"><span class="section-kicker">01 · OBJECTIVE</span><h3>What the system is for</h3><p>The goal is to convert scattered thermal observations into information that is easier to understand and act on. A user should be able to see current regional conditions, identify hotspots, review a forecast, understand the warning level and access an advisory without moving between unrelated pages.</p></article>
+        <article class="info-block sources"><span class="section-kicker">02 · DATA</span><h3>What feeds the model</h3><p>The heatwave concept uses temperature and humidity observations from Automatic Weather Stations, meteorological records associated with IMD, and satellite-derived thermal information. The current website uses illustrative data to demonstrate that workflow.</p></article>
+        <article class="info-block stakeholders"><span class="section-kicker">03 · USERS</span><h3>Who benefits</h3><p>Meteorologists need analytical context, disaster-management teams need severity and response cues, and citizens need simple warnings and heat-health actions. The pages are arranged around those different information needs.</p></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Why heatwave intelligence needs more than a temperature number</h2>
+    <div class="card feature-card">
+        <p class="body-copy">A single maximum temperature does not explain the full risk picture. Heatwave assessment also depends on how far temperatures depart from the local normal, how long elevated conditions persist, where hotspots are concentrated and how vulnerable the affected population may be.</p>
+        <div class="mini-grid">
+            <div><strong>Observed heat</strong><span>What stations are recording now.</span></div>
+            <div><strong>Expected heat</strong><span>What the regional forecast suggests for the next several days.</span></div>
+            <div><strong>Spatial concentration</strong><span>Where high-risk areas cluster on the hotspot map.</span></div>
+            <div><strong>Actionability</strong><span>What warning level and response should follow.</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">How the system works</h2>
+    <p class="section-intro">The strongest part carried over from the heatwave-prediction project is its end-to-end operating chain.</p>
+    <div class="process-grid">
+        <article class="process-step"><span class="step-no">01 · DATA ACQUISITION</span><h3>Collect observations</h3><p>Gather temperature, humidity and related environmental measurements from stations and other thermal sources.</p></article>
+        <article class="process-step"><span class="step-no">02 · VALIDATION</span><h3>Clean and verify</h3><p>Check for incomplete, inconsistent or outlying observations before they influence a decision.</p></article>
+        <article class="process-step"><span class="step-no">03 · PREDICTION</span><h3>Estimate future heat</h3><p>Use regional and station-level patterns to estimate maximum temperature and persistence.</p></article>
+        <article class="process-step"><span class="step-no">04 · CLASSIFICATION</span><h3>Assign severity</h3><p>Translate values into Normal, Watch, Warning or Severe categories for faster interpretation.</p></article>
+        <article class="process-step"><span class="step-no">05 · DISSEMINATION</span><h3>Turn insight into action</h3><p>Present bulletins, map views, forecast summaries and public advisories in one interface.</p></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">What came from each project</h2>
+    <div class="grid-2">
+        <article class="list-card"><span class="section-kicker">MINI PROJECT · PRIMARY BASE</span><h3>Core monitoring experience</h3><ul><li>Regional temperature dashboard and sortable table</li><li>Seven-day regional forecast experience</li><li>Interactive India hotspot map</li><li>Alert-level badges and status indicators</li><li>Subscription form and shared site interactions</li></ul></article>
+        <article class="list-card"><span class="section-kicker">HEATWAVE PREDICTION SITE · INTEGRATED LAYER</span><h3>Operational intelligence</h3><ul><li>Severe Heatwave Alert Bulletin for the Northern Plains</li><li>Station-wise maximum temperature and departure-from-normal fields</li><li>Five-stage forecast / alert workflow</li><li>AWS, IMD and satellite data-source context</li><li>Stakeholder roles, awareness content and official-resource guidance</li></ul></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">System boundaries and assumptions</h2>
+    <div class="grid-2">
+        <article class="card"><h3>What this prototype demonstrates</h3><p>Information architecture, responsive UI, JavaScript-driven filtering and rendering, interactive map behaviour, forms and a consistent alert workflow.</p></article>
+        <article class="card"><h3>What it does not claim</h3><p>The figures on this site are demonstration values. The interface is not a replacement for official meteorological bulletins, operational forecasts or government emergency instructions.</p></article>
+    </div>
+    <blockquote>“Early and accurate heatwave warnings support faster response and better public awareness.” — project concept statement</blockquote>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Technology used</h2>
+    <div class="tech-strip"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>jQuery</span><span>SVG map interaction</span><span>Responsive layout</span></div>
+</section>
+
+    </div>
+</main>
+<script src="jquery-4.0.0.min.js"></script>
+<script src="data.js"></script>
+<script src="site.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media & Awareness | Heatwave Intelligence System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar" id="site-sidebar">
+    <div class="sidebar-brand">
+        <h2>HIS</h2><span class="live-dot">LIVE</span>
+        <button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-controls="site-sidebar" aria-expanded="true" title="Collapse sidebar">
+            <span class="toggle-icon" aria-hidden="true">‹</span><span class="toggle-label">Collapse sidebar</span>
+        </button>
+    </div>
+    <nav aria-label="Main navigation">
+        <a href="index.html" data-short="D">Dashboard</a><a href="alerts.html" data-short="A">Alerts</a><a href="hotspot.html" data-short="M">Hotspot Map</a><a href="forecast.html" data-short="F">Forecast Summary</a><a href="subscribe.html" data-short="S">Subscribe</a><a href="sources.html" data-short="R">Sources &amp; Stakeholders</a><a href="about.html" data-short="I">About</a><a href="media.html" class="active" aria-current="page" data-short="W">Media &amp; Awareness</a>
+    </nav>
+    <div class="sidebar-note">Climate intelligence for monitoring, prediction and early warning.<br><br>Demo data only — not an official warning service.</div>
+</aside>
+<main class="main">
+    <div class="content">
+        
+<section class="page-head"><div class="eyebrow">Public awareness</div><h1>Media &amp; Awareness</h1><p>The companion project included media links and an awareness layer. This version keeps the useful part — clear public communication and official-resource access — without leaving broken local media players.</p></section>
+
+<section class="section">
+    <div class="media-grid">
+        <article class="media-card"><span class="section-kicker">AWARENESS BRIEF</span><h3>Recognise dangerous heat</h3><p>Heat risk becomes more important when high temperatures persist, nights stay warm or humidity increases perceived heat. The site therefore combines temperature, persistence and warning context instead of relying on a single number.</p><a class="media-link" href="alerts.html">Read current safety guidance →</a></article>
+        <article class="media-card"><span class="section-kicker">PUBLIC ACTION</span><h3>Prepare before the hottest hours</h3><p>Plan outdoor activity outside peak heat, keep drinking water available, use shade or cooling spaces and check regularly on people who may be more affected by heat.</p><a class="media-link" href="subscribe.html">Set alert preferences →</a></article>
+        <article class="media-card"><span class="section-kicker">OFFICIAL RESOURCE</span><h3>India Meteorological Department</h3><p>Use official meteorological forecasts and warnings for real-world decisions. This academic site should be treated as a demonstration interface rather than an official warning authority.</p><a class="media-link" href="https://mausam.imd.gov.in" target="_blank" rel="noopener noreferrer">Open IMD website ↗</a></article>
+        <article class="media-card"><span class="section-kicker">SYSTEM AWARENESS</span><h3>How the message is produced</h3><p>The heatwave-prediction project describes a pipeline of acquisition → validation → prediction → classification → dissemination. Explore the Sources page to see the full data and stakeholder flow.</p><a class="media-link" href="sources.html">Explore system workflow →</a></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Suggested awareness message</h2>
+    <div class="notice large-notice"><strong>During periods of extreme heat:</strong> reduce unnecessary afternoon exposure, keep yourself hydrated, use light clothing and shade, check on vulnerable people, and follow the latest local public-health and emergency instructions.</div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Why broken media was removed</h2>
+    <div class="card"><p class="body-copy">The source heatwave package referenced local MP4 and MP3 assets that were not present in the supplied project directory. Rather than shipping dead controls, this merged version turns that area into usable awareness content and links only to resources that are actually reachable from the site.</p></div>
+</section>
+
+    </div>
+</main>
+<script src="jquery-4.0.0.min.js"></script>
+<script src="data.js"></script>
+<script src="site.js"></script>
+
+</body>
+</html>

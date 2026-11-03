@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotspot Map | Heatwave Intelligence System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar" id="site-sidebar">
+    <div class="sidebar-brand">
+        <h2>HIS</h2><span class="live-dot">LIVE</span>
+        <button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-controls="site-sidebar" aria-expanded="true" title="Collapse sidebar">
+            <span class="toggle-icon" aria-hidden="true">‹</span><span class="toggle-label">Collapse sidebar</span>
+        </button>
+    </div>
+    <nav aria-label="Main navigation">
+        <a href="index.html" data-short="D">Dashboard</a><a href="alerts.html" data-short="A">Alerts</a><a href="hotspot.html" class="active" aria-current="page" data-short="M">Hotspot Map</a><a href="forecast.html" data-short="F">Forecast Summary</a><a href="subscribe.html" data-short="S">Subscribe</a><a href="sources.html" data-short="R">Sources &amp; Stakeholders</a><a href="about.html" data-short="I">About</a><a href="media.html" data-short="W">Media &amp; Awareness</a>
+    </nav>
+    <div class="sidebar-note">Climate intelligence for monitoring, prediction and early warning.<br><br>Demo data only — not an official warning service.</div>
+</aside>
+<main class="main">
+    <div class="content">
+        <section class="page-head"><div class="eyebrow">Spatial heat intelligence</div><h1>Heatwave Hotspot Map</h1><p>Use the interactive map to see how the heat risk signal changes across Indian regions. Select a region for its temperature, level and short interpretation.</p></section>
+
+<section class="section">
+    <div class="map-layout">
+        <div class="hotspot-map-box">
+            <div class="map-toolbar"><h3>Interactive India Heatwave Map</h3><div class="map-buttons"><button type="button" id="zoomIn" aria-label="Zoom in">+</button><button type="button" id="zoomOut" aria-label="Zoom out">−</button><button type="button" id="resetMap" aria-label="Reset map">Reset</button></div></div>
+            <div class="map-container"><div id="mapLoading" class="map-loading">Loading India map…</div><svg id="indiaMap" viewBox="0 0 900 920" role="img" aria-label="Interactive India heatwave hotspot map"><g id="mapGroup"></g></svg></div>
+        </div>
+        <aside class="hotspot-info" id="hotspotInfo"><div class="hotspot-label">Selected region</div><h3 id="selectedRegion">North India</h3><div class="hotspot-temp" id="selectedTemperature">45°C</div><div id="selectedBadge"><span class="badge l3">Severe</span></div><p class="hotspot-message" id="selectedMessage">Select a state or region to view the demonstration heat-risk message.</p><div id="regionList" class="region-list"></div></aside>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Heatwave alert levels</h2>
+    <div class="hotspot-guide">
+        <article class="guide-card guide-l0"><span class="badge l0">Normal</span><h3>Low signal</h3><p>Temperatures remain below the current watch threshold in this demonstration model.</p></article>
+        <article class="guide-card guide-l1"><span class="badge l1">Watch</span><h3>Early attention</h3><p>Elevated heat is being monitored and protective habits should become more deliberate.</p></article>
+        <article class="guide-card guide-l2"><span class="badge l2">Warning</span><h3>High risk</h3><p>Reduce prolonged exposure and use stronger heat-health precautions.</p></article>
+        <article class="guide-card guide-l3"><span class="badge l3">Severe</span><h3>Extreme risk</h3><p>Minimise unnecessary heat exposure and follow official advisories.</p></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">How to use the map</h2>
+    <div class="grid-2">
+        <article class="card"><h3>Explore</h3><p>Click a state on the map or choose a region from the list to update the information panel. Zoom controls help inspect the SVG map.</p></article>
+        <article class="card"><h3>Interpret</h3><p>The colour and severity label are illustrative outputs from the site's sample dataset. Always compare the map with the Forecast and Alerts pages before drawing conclusions.</p></article>
+    </div>
+</section>
+
+    </div>
+</main>
+<script src="jquery-4.0.0.min.js"></script>
+<script src="site.js"></script>
+<script src="data.js"></script>
+<script src="hotspot.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subscribe | Heatwave Intelligence System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar" id="site-sidebar">
+    <div class="sidebar-brand">
+        <h2>HIS</h2><span class="live-dot">LIVE</span>
+        <button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-controls="site-sidebar" aria-expanded="true" title="Collapse sidebar">
+            <span class="toggle-icon" aria-hidden="true">‹</span><span class="toggle-label">Collapse sidebar</span>
+        </button>
+    </div>
+    <nav aria-label="Main navigation">
+        <a href="index.html" data-short="D">Dashboard</a><a href="alerts.html" data-short="A">Alerts</a><a href="hotspot.html" data-short="M">Hotspot Map</a><a href="forecast.html" data-short="F">Forecast Summary</a><a href="subscribe.html" class="active" aria-current="page" data-short="S">Subscribe</a><a href="sources.html" data-short="R">Sources &amp; Stakeholders</a><a href="about.html" data-short="I">About</a><a href="media.html" data-short="W">Media &amp; Awareness</a>
+    </nav>
+    <div class="sidebar-note">Climate intelligence for monitoring, prediction and early warning.<br><br>Demo data only — not an official warning service.</div>
+</aside>
+<main class="main">
+    <div class="content">
+        
+<section class="page-head"><div class="eyebrow">Public advisory</div><h1>Subscribe for Heatwave Alerts</h1><p>Create a demonstration alert profile. The form combines the mini-project's registration fields with the heatwave site's language, threshold and notification choices.</p></section>
+
+<section class="section">
+    <div class="grid-2">
+        <article class="card"><span class="card-number">WHAT YOU CAN CHOOSE</span><h3>Personalise your advisory profile</h3><p>Select your region, preferred language, minimum alert level and delivery channels. In a production deployment, those preferences could be connected to an alert-dispatch service.</p><ul class="compact-list"><li>Watch / Warning / Severe threshold</li><li>English / Hindi / Marathi</li><li>SMS / Email / Push preferences</li></ul></article>
+        <article class="card"><span class="card-number">IMPORTANT</span><h3>Demo only</h3><p>The site stores nothing remotely and does not send real alerts. The form demonstrates validation, user preferences and confirmation feedback for the Web Development Laboratory project.</p></article>
+    </div>
+</section>
+
+<section class="section">
+    <form class="form-card" id="subscribe-form">
+        <div class="form-grid">
+            <div class="form-group"><label for="cname">Full name</label><input id="cname" name="name" type="text" placeholder="Enter your name" required></div>
+            <div class="form-group"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
+            <div class="form-group"><label for="mobile">Mobile number</label><input id="mobile" name="mobile" type="tel" placeholder="10-digit number" pattern="[0-9 +()-]{10,16}" required></div>
+            <div class="form-group"><label for="ageGroup">Age group</label><select id="ageGroup" name="age" required><option value="">Select</option><option>Under 18</option><option>18–29</option><option>30–59</option><option>60+</option></select></div>
+            <div class="form-group"><label for="location">City / district</label><input id="location" name="location" type="text" placeholder="e.g. Mumbai" required></div>
+            <div class="form-group"><label for="pin">PIN code</label><input id="pin" name="pin" type="text" inputmode="numeric" pattern="[0-9]{6}" placeholder="6-digit PIN" required></div>
+        </div>
+        <fieldset><legend>Preferred alert language</legend><label class="choice"><input type="radio" name="language" value="English" checked> English</label><label class="choice"><input type="radio" name="language" value="Hindi"> Hindi</label><label class="choice"><input type="radio" name="language" value="Marathi"> Marathi</label></fieldset>
+        <fieldset><legend>Alert types to receive</legend><label class="choice"><input type="checkbox" name="calerts" value="Watch"> Watch alerts</label><label class="choice"><input type="checkbox" name="calerts" value="Warning"> Warning alerts</label><label class="choice"><input type="checkbox" name="calerts" value="Severe"> Severe alerts</label><label class="choice"><input type="checkbox" name="calerts" value="Advisory"> Heat-health advisories</label></fieldset>
+        <fieldset><legend>Delivery preferences</legend><label class="choice"><input type="checkbox" name="channel" value="SMS" checked> SMS</label><label class="choice"><input type="checkbox" name="channel" value="Email" checked> Email</label><label class="choice"><input type="checkbox" name="channel" value="Push"> Mobile app push notification</label></fieldset>
+        <div class="form-grid"><div class="form-group"><label for="alertLevel">Minimum alert level</label><select id="alertLevel" required><option>Watch</option><option>Warning</option><option>Severe</option></select></div><div class="form-group"><label for="registrationDate">Registration date</label><input id="registrationDate" type="date"></div></div>
+        <div class="form-group"><label class="choice"><input id="consent" type="checkbox" required> I understand this is an academic demo and not an official warning service.</label></div>
+        <div class="form-actions"><input type="submit" value="Save preferences"><input type="reset" value="Reset"></div>
+        <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+    </form>
+</section>
+
+    </div>
+</main>
+<script src="jquery-4.0.0.min.js"></script>
+<script src="data.js"></script>
+<script src="site.js"></script>
+
+</body>
+</html>

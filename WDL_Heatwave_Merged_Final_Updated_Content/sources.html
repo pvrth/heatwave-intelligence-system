@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sources & Stakeholders | Heatwave Intelligence System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar" id="site-sidebar">
+    <div class="sidebar-brand">
+        <h2>HIS</h2><span class="live-dot">LIVE</span>
+        <button type="button" id="sidebar-toggle" class="sidebar-toggle" aria-controls="site-sidebar" aria-expanded="true" title="Collapse sidebar">
+            <span class="toggle-icon" aria-hidden="true">‹</span><span class="toggle-label">Collapse sidebar</span>
+        </button>
+    </div>
+    <nav aria-label="Main navigation">
+        <a href="index.html" data-short="D">Dashboard</a><a href="alerts.html" data-short="A">Alerts</a><a href="hotspot.html" data-short="M">Hotspot Map</a><a href="forecast.html" data-short="F">Forecast Summary</a><a href="subscribe.html" data-short="S">Subscribe</a><a href="sources.html" class="active" aria-current="page" data-short="R">Sources &amp; Stakeholders</a><a href="about.html" data-short="I">About</a><a href="media.html" data-short="W">Media &amp; Awareness</a>
+    </nav>
+    <div class="sidebar-note">Climate intelligence for monitoring, prediction and early warning.<br><br>Demo data only — not an official warning service.</div>
+</aside>
+<main class="main">
+    <div class="content">
+        
+<section class="page-head"><div class="eyebrow">System foundations</div><h1>Sources &amp; Stakeholders</h1><p>Understand where the heat signal comes from, what happens to it before a warning is issued, and who uses each layer of information.</p></section>
+
+<section class="section">
+    <h2 class="section-title">Primary data sources</h2>
+    <div class="grid">
+        <article class="card"><span class="card-number">01 · AWS</span><h3>Automatic Weather Stations</h3><p>Ground stations provide direct observations such as temperature and humidity. In a production pipeline, these readings would be checked for freshness and quality before analysis.</p></article>
+        <article class="card"><span class="card-number">02 · IMD</span><h3>India Meteorological Department</h3><p>Historical climatology, meteorological observations and official warnings provide institutional context for understanding whether conditions are abnormal and how alerts should be communicated.</p></article>
+        <article class="card"><span class="card-number">03 · SATELLITE</span><h3>Thermal satellite feeds</h3><p>Land-surface temperature and broader spatial patterns can complement point observations, helping the hotspot layer represent heat concentration beyond individual stations.</p></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Forecast → alert workflow</h2>
+    <div class="process-grid">
+        <article class="process-step"><span class="step-no">01 · ACQUIRE</span><h3>Collect</h3><p>Bring together field and remote-sensing observations.</p></article>
+        <article class="process-step"><span class="step-no">02 · VALIDATE</span><h3>Check quality</h3><p>Identify missing, inconsistent or suspicious observations.</p></article>
+        <article class="process-step"><span class="step-no">03 · PREDICT</span><h3>Forecast heat</h3><p>Estimate future maximum temperature and persistence by region.</p></article>
+        <article class="process-step"><span class="step-no">04 · CLASSIFY</span><h3>Assign level</h3><p>Map the resulting heat signal to a consistent severity language.</p></article>
+        <article class="process-step"><span class="step-no">05 · DISSEMINATE</span><h3>Communicate</h3><p>Publish a bulletin, dashboard indicator or advisory for the right audience.</p></article>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Stakeholders &amp; their needs</h2>
+    <div class="grid">
+        <article class="list-card"><span class="section-kicker">METEOROLOGISTS</span><h3>Analytical review</h3><ul><li>Inspect observations and anomalies.</li><li>Review forecast behaviour and persistence.</li><li>Validate warning context before dissemination.</li></ul></article>
+        <article class="list-card"><span class="section-kicker">DISASTER MANAGEMENT</span><h3>Operational response</h3><ul><li>Identify affected areas and severity.</li><li>Coordinate field teams and response measures.</li><li>Distribute approved warnings and advisories.</li></ul></article>
+        <article class="list-card"><span class="section-kicker">GENERAL PUBLIC</span><h3>Simple action</h3><ul><li>See what the current warning means.</li><li>Read practical heat-health precautions.</li><li>Subscribe for demonstration alerts.</li></ul></article>
+    </div>
+</section>
+
+<section class="section">
+    <div class="grid-2">
+        <article class="list-card"><h3>Data integrity principles</h3><ul><li>Sample values on this website are for demonstration.</li><li>Production alerts should never be generated from unchecked observations.</li><li>Forecasts should be revised as new evidence arrives.</li><li>Official bulletins remain the authoritative source for public safety decisions.</li></ul></article>
+        <article class="list-card"><h3>Abbreviations</h3><dl><dt>AWS</dt><dd>Automatic Weather Station</dd><dt>IMD</dt><dd>India Meteorological Department</dd><dt>HW</dt><dd>Heatwave</dd><dt>SHW</dt><dd>Severe Heatwave</dd><dt>LST</dt><dd>Land Surface Temperature</dd><dt>UHI</dt><dd>Urban Heat Island</dd></dl></article>
+    </div>
+</section>
+
+    </div>
+</main>
+<script src="jquery-4.0.0.min.js"></script>
+<script src="data.js"></script>
+<script src="site.js"></script>
+
+</body>
+</html>
